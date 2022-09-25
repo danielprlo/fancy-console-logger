@@ -15,4 +15,8 @@ export default class LoggerDecorator implements LoggerInterface {
     getMessage(): string {
         return this.logger.getMessage()
     }
+
+    logMessage(): void {
+        console.log(this.getMessage())
+    }
 }

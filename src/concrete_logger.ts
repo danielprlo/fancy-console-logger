@@ -16,5 +16,9 @@ export default class ConcreteLogger implements LoggerInterface {
         return this.options.getTitle()
     }
 
+    logMessage(): void {
+        console.log(this.getMessage())
+    }
+
     
 }
