@@ -37,9 +37,4 @@ describe('Logger console logs content', () => {
     FancyConsoleLogger.log('This text should be red', {}, TextColors.Red)
     expect(console.log).toHaveBeenCalledWith(`${TextColors.Red}%s${endLine}`, 'This text should be red')
   });
-  test('Log function should log the file name', () => {
-    console.log = jest.fn();
-    FancyConsoleLogger.log('This should do', {}, TextColors.Green, true)
-    expect(console.log).toHaveBeenCalledWith(`${TextColors.Red}%s${endLine}`, 'This text should be red')
-  });
 });
