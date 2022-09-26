@@ -25,7 +25,7 @@ describe('Logger console logs content', () => {
   test('Log function should log the title and payload', () => {
     console.log = jest.fn();
     FancyConsoleLogger.log('Some test', { another: 'test', anotherMore: 'test' })
-    expect(console.log).toHaveBeenCalledWith('Some test -> another: test anotherMore: test ')
+    expect(console.log).toHaveBeenCalledWith('Some test -> another: test anotherMore: test')
   });
   test('Log function should log the title in color green', () => {
     console.log = jest.fn();
@@ -36,5 +36,15 @@ describe('Logger console logs content', () => {
     console.log = jest.fn();
     FancyConsoleLogger.log('This text should be red', {}, TextColors.Red)
     expect(console.log).toHaveBeenCalledWith(`${TextColors.Red}%s${endLine}`, 'This text should be red')
+  });
+  test('Log function should log the title and the name of the file', () => {
+    console.log = jest.fn();
+    FancyConsoleLogger.log('This should show info', {}, null, true)
+    expect(console.log).toHaveBeenCalledWith(`This should show info in file logger_decorator_file_info.ts`)
+  });
+  test('Log function should log the title, the payload, in color and the name of the file', () => {
+    console.log = jest.fn();
+    FancyConsoleLogger.log('This should show green', { test: 'test' }, TextColors.Green, true)
+    expect(console.log).toHaveBeenCalledWith(`${TextColors.Green}%s${endLine}`, 'This should show green -> test: test in file logger_decorator_file_info.ts')
   });
 });

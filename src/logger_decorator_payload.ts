@@ -14,7 +14,7 @@ export default class LoggerDecoratorPayload extends LoggerDecorator {
             message += `${key}: ${payload[key]} `
         })
 
-        return message
+        return message.trim()
     }
    
 }
