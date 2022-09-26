@@ -1,1 +1,1 @@
-export { sayHello } from './hello-world'
+export { FancyConsoleLogger } from './fancy_console_logger'

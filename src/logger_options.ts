@@ -6,26 +6,26 @@ export default class LoggerOptions {
     private textColor: TextColors
     private showInfoFile: boolean
 
-    constructor(title: string, payload: {} = {}, textColor: TextColors, showInfoFile: boolean) {
+    constructor(title: string, payload: {} = {}, textColor: TextColors|null, showInfoFile: boolean) {
         this.title = title
         this.payload = payload
         this.textColor = textColor
         this.showInfoFile = showInfoFile
     }
 
-    getTitle() {
+    getTitle(): string {
         return this.title
     }
 
-    getPayload() {
+    getPayload(): {} {
         return this.payload
     }
 
-    getTextColor() {
+    getTextColor(): TextColors|null {
         return this.textColor
     }
 
-    getShowInfoFile() {
+    getShowInfoFile(): boolean {
         return this.showInfoFile
     }
 }

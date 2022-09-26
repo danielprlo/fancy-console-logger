@@ -7,7 +7,12 @@ import LoggerDecoratorColor from "./logger_decorator_color";
 import LoggerDecoratorFileInfo from "./logger_decorator_file_info";
 
 export class FancyConsoleLogger {
-    static log(title: string, payload: {} = {}, textColor: TextColors|null = null, showInfoFile: boolean = false) {
+    static log(
+        title: string,
+        payload: {} = {},
+        textColor: TextColors|null = null,
+        showInfoFile: boolean = false
+        ): void {
         const loggerOptions: LoggerOptions = new LoggerOptions(title, payload, textColor, showInfoFile)
 
         let log: LoggerInterface = new ConcreteLogger(loggerOptions)

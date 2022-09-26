@@ -7,8 +7,8 @@ export default class LoggerDecoratorPayload extends LoggerDecorator {
         return `${super.getMessage()} -> ${this.formatPayloadMessage(payload)}`
     }
 
-    private formatPayloadMessage(payload) {
-        const payLoadKeys = Object.keys(payload)
+    private formatPayloadMessage(payload: {}) {
+        const payLoadKeys: Array<string> = Object.keys(payload)
         let message: string = ''
         payLoadKeys.forEach((key) => {
             message += `${key}: ${payload[key]} `
@@ -16,5 +16,4 @@ export default class LoggerDecoratorPayload extends LoggerDecorator {
 
         return message.trim()
     }
-   
 }

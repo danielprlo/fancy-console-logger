@@ -3,7 +3,7 @@ import * as path from "path";
 
 export default class LoggerDecoratorFileInfo extends LoggerDecorator {
     getMessage(): string {
-        const filename = path.basename(__filename)
+        const filename: string = path.basename(__filename)
         return `${super.getMessage()} in file ${filename}`
     }
 
