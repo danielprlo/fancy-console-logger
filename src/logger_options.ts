@@ -2,11 +2,11 @@ import { TextColors } from "./console_colors"
 
 export default class LoggerOptions {
     private title: string
-    private payload: {}
+    private payload: Record<string, string>
     private textColor: TextColors
     private showInfoFile: boolean
 
-    constructor(title: string, payload: {} = {}, textColor: TextColors|null, showInfoFile: boolean) {
+    constructor(title: string, payload: Record<string, string> = {}, textColor: TextColors|null, showInfoFile: boolean) {
         this.title = title
         this.payload = payload
         this.textColor = textColor
@@ -17,7 +17,7 @@ export default class LoggerOptions {
         return this.title
     }
 
-    getPayload(): {} {
+    getPayload(): Record<string, string> {
         return this.payload
     }
 

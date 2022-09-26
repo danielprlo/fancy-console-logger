@@ -1,4 +1,4 @@
-import { TextColors, endLine } from "./console_colors";
+import { TextColors } from "./console_colors";
 import ConcreteLogger from "./concrete_logger";
 import LoggerDecoratorPayload from "./logger_decorator_payload";
 import LoggerOptions from "./logger_options";
@@ -9,9 +9,9 @@ import LoggerDecoratorFileInfo from "./logger_decorator_file_info";
 export class FancyConsoleLogger {
     static log(
         title: string,
-        payload: {} = {},
+        payload: Record<string, string> = {},
         textColor: TextColors|null = null,
-        showInfoFile: boolean = false
+        showInfoFile = false
         ): void {
         const loggerOptions: LoggerOptions = new LoggerOptions(title, payload, textColor, showInfoFile)
 
