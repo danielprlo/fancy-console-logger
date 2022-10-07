@@ -1,6 +1,6 @@
 {
-  "name": "fancy-console-logger",
-  "version": "1.0.0",
+  "name": "@danielprlo/fancy-console-logger",
+  "version": "1.2.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

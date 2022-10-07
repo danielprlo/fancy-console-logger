@@ -1,1 +1,1 @@
-export { FancyConsoleLogger as fcl } from './fancy_console_logger'
+export { FancyConsoleLogger as fconsole } from './fancy_console_logger'
